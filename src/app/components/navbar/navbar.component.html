@@ -1,1 +1,27 @@
-<p>navbar works!</p>,
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- Perfil del usuario -->
+    <div class="user-profile gap-5">
+      <button class="avatar cursor-pointer">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQysVDKJGnwVtbgscEQ4VOgRQx_nzcsCUzKWw&s"
+          alt="Marco De Lama">
+      </button>
+      <div class="user-info">
+        <h3 class="user-name">Marco De Lama</h3>
+        <p class="user-title">Analista Programador</p>
+      </div>
+    </div>
+
+    <!-- Menú de navegación -->
+    <div class="nav-menu gap-4">
+      @for(item of navbarOptions; track item.value){
+      <button class="nav-item" [class.active]="activeTab === item.value" (click)="setActiveTab(item.value)">
+        {{ item.title }}
+      </button>
+      }
+      <button class="settings-btn">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</nav>
