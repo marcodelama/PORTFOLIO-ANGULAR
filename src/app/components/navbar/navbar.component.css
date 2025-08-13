@@ -1,20 +1,25 @@
 .navbar {
-  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #2c2c2c00 0%, #1a1a1a 100%);
   border: 1px solid #404040;
   border-radius: 12px;
-  padding: 16px 24px;
+  padding: 6px 12px;
   display: flex;
   margin: 20px auto;
   width: 60%;
   min-width: 800px;
   max-width: 1200px;
   box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.3),
-    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 5px 30px rgba(0, 0, 0, 0.657),
+    0 1px 0 rgba(255, 255, 255, 0.031) inset,
     0 -1px 0 rgba(0, 0, 0, 0.3) inset;
   position: relative;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  color: #b0b0b0;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.281),
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .navbar::before {
@@ -73,11 +78,9 @@
   height: 48px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background: linear-gradient(135deg, #4a90e2, #357abd);
   box-shadow: 
-    0 2px 8px rgba(0, 0, 0, 0.3),
-    0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    4px 3px 8px rgba(0, 0, 0, 0.864),
+    0 1px 0 rgba(0, 0, 0, 0.3) inset;
 }
 
 .avatar img {
@@ -101,7 +104,6 @@
 }
 
 .user-title {
-  color: #b0b0b0;
   font-size: 13px;
   font-weight: 400;
   margin: 0;
@@ -128,6 +130,10 @@
   white-space: nowrap;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.141),
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .nav-item:hover {
@@ -151,12 +157,16 @@
     0 2px 12px rgba(74, 144, 226, 0.3),
     0 1px 0 rgba(255, 255, 255, 0.2) inset;
   position: relative;
+  text-shadow:
+    0 0 5px #117cf73a,
+    0 0 10px #4396f5,
+    0 0 15px #247fe6;
 }
 
 .nav-item.active::after {
   content: '';
   position: absolute;
-  bottom: -16px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
