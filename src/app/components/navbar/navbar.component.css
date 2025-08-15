@@ -1,25 +1,36 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/fonts/Minecraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+nav {
+  font-family: 'Minecraft', sans-serif;
+}
+
 .navbar {
-  background: linear-gradient(135deg, #2c2c2c00 0%, #1a1a1a 100%);
-  border: 1px solid #404040;
-  border-radius: 12px;
-  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #0b0b0b89;
+  border-radius: 8px;
+  padding: 8px 12px;
   display: flex;
-  margin: 20px auto;
-  width: 60%;
+  margin: 30px auto;
+  width: 70%;
   min-width: 800px;
   max-width: 1200px;
-  box-shadow: 
-    0 5px 30px rgba(0, 0, 0, 0.657),
+  box-shadow:
+    0 5px 30px rgba(0, 0, 0, 0.742),
     0 1px 0 rgba(255, 255, 255, 0.031) inset,
-    0 -1px 0 rgba(0, 0, 0, 0.3) inset;
+    0 -1px 0 rgba(0, 0, 0, 0.55) inset;
   position: relative;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
   color: #b0b0b0;
   text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.281),
-    0 0 10px rgba(255, 255, 255, 0.4),
-    0 0 15px rgba(255, 255, 255, 0.2);
+    0 0 5px rgba(255, 255, 255, 0.301),
+    0 0 10px rgba(255, 255, 255, 0.061),
+    0 0 15px rgba(255, 255, 255, 0.342);
 }
 
 .navbar::before {
@@ -29,13 +40,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0.05) 50%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
-  border-radius: 12px;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.02) 100%);
+  border-radius: 8px;
   pointer-events: none;
 }
 
@@ -46,12 +55,10 @@
   left: 1px;
   right: 1px;
   height: 40%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.02) 70%,
-    transparent 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 70%,
+      transparent 100%);
   border-radius: 11px 11px 0 0;
   pointer-events: none;
 }
@@ -78,7 +85,7 @@
   height: 48px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     4px 3px 8px rgba(0, 0, 0, 0.864),
     0 1px 0 rgba(0, 0, 0, 0.3) inset;
 }
@@ -117,9 +124,8 @@
 }
 
 .nav-item {
-  background: none;
   border: 1px solid transparent;
-  color: #b0b0b0;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
   padding: 12px 20px;
@@ -128,32 +134,28 @@
   transition: all 0.3s ease;
   position: relative;
   white-space: nowrap;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.141),
-    0 0 10px rgba(255, 255, 255, 0.4),
-    0 0 15px rgba(255, 255, 255, 0.2);
+    0 0 5px rgba(255, 255, 255, 0.707),
+    0 0 10px rgba(255, 255, 255, 0.111),
+    0 0 15px rgba(255, 255, 255, 0);
 }
 
 .nav-item:hover {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
+  box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.2),
     0 1px 0 rgba(255, 255, 255, 0.1) inset;
 }
 
 .nav-item.active {
   color: #4a90e2;
-  background: linear-gradient(
-    135deg,
-    rgba(74, 144, 226, 0.2) 0%,
-    rgba(74, 144, 226, 0.1) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(74, 144, 226, 0.2) 0%,
+      rgba(74, 144, 226, 0.1) 100%);
   border: 1px solid rgba(74, 144, 226, 0.3);
-  box-shadow: 
+  box-shadow:
     0 2px 12px rgba(74, 144, 226, 0.3),
     0 1px 0 rgba(255, 255, 255, 0.2) inset;
   position: relative;
@@ -200,7 +202,7 @@
   color: #ffffff;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
+  box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.2),
     0 1px 0 rgba(255, 255, 255, 0.1) inset;
 }
@@ -225,24 +227,24 @@
     margin: 10px auto;
     padding: 12px 16px;
   }
-  
+
   .navbar-content {
     gap: 16px;
   }
-  
+
   .nav-menu {
     gap: 4px;
   }
-  
+
   .nav-item {
     padding: 8px 12px;
     font-size: 13px;
   }
-  
+
   .user-name {
     font-size: 14px;
   }
-  
+
   .user-title {
     font-size: 12px;
   }
@@ -252,13 +254,13 @@
   .user-profile {
     min-width: 140px;
   }
-  
+
   .nav-menu {
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  
+
   .nav-menu::-webkit-scrollbar {
     display: none;
   }
