@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import type { NavbarOptions } from '../../interfaces/gif.interfaces';
+import type { NavbarOptions } from '../../../interfaces/gif.interfaces';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'navbar',
   imports: [],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
