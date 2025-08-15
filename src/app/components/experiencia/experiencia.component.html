@@ -1,0 +1,26 @@
+<h1 class="text-3xl font-bold text-yellow-400 text-center mb-8">
+  EXPERIENCIAS
+</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+  @for (exp of experiencias; track $index) {
+    <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <img src="assets/unah-logo.png" alt="Logo" class="w-12 h-12" />
+          <div>
+            <h2 class="text-lg font-semibold">{{ exp.institucion }}</h2>
+            <p class="text-sm text-gray-400">{{ exp.puesto }}</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400">{{ exp.fecha }}</p>
+      </div>
+
+      <ul class="list-disc pl-6 mt-4 space-y-1">
+        @for (tarea of exp.tareas; track $index) {
+          <li>{{ tarea }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>
