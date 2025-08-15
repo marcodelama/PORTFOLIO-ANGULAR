@@ -1,0 +1,106 @@
+.profile-container {
+  padding: 40px;
+  margin-top: 50px;
+  max-width: 1350px;
+  width: 80%;
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  flex-shrink: 0;
+}
+
+.profile-image img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.822);
+}
+
+.profile-content {
+  flex: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Starjedi';
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #FFD700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.name {
+  font-family: 'Starjhol';
+  font-size: 2rem;
+  font-weight: 400;
+  color: #90EE90;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  width: 50%;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border: 2px solid #90EE90;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: rgba(144, 238, 144, 0.1);
+}
+
+.description {
+  font-family: 'KodeMono';
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  font-weight: 300;
+}
+
+.highlight {
+  color: #4A9EFF;
+  font-weight: 500;
+}
+
+.tech-highlight {
+  color: #FF6B6B;
+  font-weight: 500;
+}
+
+.framework-highlight {
+  color: #50C878;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 240px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

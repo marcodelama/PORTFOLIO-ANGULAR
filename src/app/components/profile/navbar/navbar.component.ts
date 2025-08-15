@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import type { NavbarOptions } from '../../interfaces/gif.interfaces';
+import type { NavbarOptions } from '../../../interfaces/gif.interfaces';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'navbar',
   imports: [RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
