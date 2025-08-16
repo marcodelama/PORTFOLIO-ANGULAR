@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import type { NavbarOptions } from '../../../interfaces/gif.interfaces';
+import type { NavbarOptions } from '../../../interfaces/Navbar.interfaces';
 import { RouterModule } from '@angular/router';
 
 @Component({
