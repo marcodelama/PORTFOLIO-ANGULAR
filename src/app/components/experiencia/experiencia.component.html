@@ -1,26 +1,39 @@
-<h1 class="text-3xl font-bold text-yellow-400 text-center mb-8">
-  EXPERIENCIAS
-</h1>
+<section class="p-4">
+  <h1 class="text-3xl font-bold text-yellow-400 text-center mb-8 titulo">
+    EXPERIENCIAS
+  </h1>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-  @for (exp of experiencias; track $index) {
-    <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-3">
-          <img src="assets/unah-logo.png" alt="Logo" class="w-12 h-12" />
-          <div>
-            <h2 class="text-lg font-semibold">{{ exp.institucion }}</h2>
-            <p class="text-sm text-gray-400">{{ exp.puesto }}</p>
-          </div>
+  <div class="flex flex-wrap justify-center gap-6 max-w-6xl w-full mx-auto px-4">
+    @for (exp of experiencias; track $index) {
+    <div
+      class="bg-[#171B27] text-white p-8 rounded-lg shadow-lg border border-[#4F515D] relative w-full md:w-[calc(50%-12px)]">
+
+      <p class="text-sm text-gray-400 minecraft absolute top-4 right-6">
+        {{ exp.fecha }}
+      </p>
+
+      <div class="flex items-start mt-2">
+        <div class="mr-4 w-16 h-16 shrink-0 rounded-full overflow-hidden">
+          <img [src]="exp.logo" [alt]="exp.institucion + ' logo'" class="w-full h-full object-cover" />
         </div>
-        <p class="text-sm text-gray-400">{{ exp.fecha }}</p>
-      </div>
 
-      <ul class="list-disc pl-6 mt-4 space-y-1">
-        @for (tarea of exp.tareas; track $index) {
-          <li>{{ tarea }}</li>
-        }
-      </ul>
+        <div class="flex-1 min-w-0">
+          <div class="flex flex-wrap items-center justify-between">
+            <h2 class="text-lg font-semibold">{{ exp.institucion }}</h2>
+            <p class="text-sm text-gray-400 minecraft">{{ exp.puesto }}</p>
+          </div>
+
+          <!-- Lista -->
+          <ul class="list-disc list-inside mt-4 space-y-1 pl-1">
+            @for (tarea of exp.tareas; track $index) {
+            <li class="minecraft text-gray-300 font-normal leading-snug -indent-4 pl-4">
+              {{ tarea }}
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
     </div>
-  }
-</div>
+    }
+  </div>
+</section>
