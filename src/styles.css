@@ -22,6 +22,10 @@
     src: url('/fonts/KodeMono.ttf') format('truetype');
 }
 
+.minecraft-font {
+  font-family: 'Minecraft', 'Roboto';
+}
+
 .bg-primary {
     background-color: #1E1E1E;
 }

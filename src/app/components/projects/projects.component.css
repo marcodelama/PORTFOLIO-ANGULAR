@@ -127,11 +127,6 @@
   border-radius: 8px;
   width: fit-content;
 }
-
-.resources-buttons{
-  font-family: 'Minecraft', 'Roboto';
-}
-
 @media (max-width: 768px) {
   .main-title {
     font-size: 2rem;

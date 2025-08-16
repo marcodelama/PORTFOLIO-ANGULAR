@@ -2,7 +2,7 @@
   <div class="container flex flex-col gap-10 p-6">
     <h1 class="main-title">STACk PRoJEcTs</h1>
 
-    <div class="flex justify-center gap-5">
+    <div class="flex justify-center gap-5 flex-wrap">
       @for(item of stackOptions; track item){
       <button class="filter-tab">
         <i [class]="['fa-solid', item.icon]" style="font-size: 40px; margin-bottom: 15px; color: #fff;"></i>
@@ -13,7 +13,7 @@
 
     <div class="projects-section">
       <div class="project-card">
-        <div class="flex justify-between items-center mb-5">
+        <div class="flex justify-between items-center mb-5 flex-wrap">
           <img src="/img/LogoBregma.png" alt="Proyecto ÍCONO">
           <p class="project-title">GetByte S.A.C.</p>
           <div class="project-date">10/07/2023- 12/12/2023</div>
@@ -35,14 +35,14 @@
             </p>
             <p class="mb-2">Tecnologías utilizadas:</p>
 
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center flex-wrap">
               <div class="stack-tech flex gap-3">
                 @for(tech of techs; track tech.id){
                 <img class="w-15 rounded-sm bg-primary p-1" [src]="tech.url" alt="">
                 }
               </div>
 
-              <div class="resources-buttons flex gap-3">
+              <div class="minecraft-font flex flex-wrap gap-3">
                 <button class="bg-amber-400 p-2 rounded-lg cursor-pointer flex items-center">
                   <i class="fa-solid fa-video mr-2 text-2xl"></i>
                   Ver demo
