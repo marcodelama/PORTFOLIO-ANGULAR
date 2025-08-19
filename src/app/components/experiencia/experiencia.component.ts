@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Experiencia {
-  institucion: string;
-  puesto: string;
-  fecha: string;
-  tareas: string[];
-  logo: string;
-}
+import type { Experiencia } from '../../interfaces/Experiencia.interface';
 
 @Component({
   selector: 'app-experiencia',
