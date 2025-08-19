@@ -3,12 +3,16 @@ nav {
 }
 
 .navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 1000; 
   background: transparent;
   border: 1px solid #0b0b0b89;
   border-radius: 8px;
   padding: 8px 12px;
   display: flex;
-  margin: 30px auto;
   width: 70%;
   min-width: 800px;
   max-width: 1200px;
@@ -16,7 +20,6 @@ nav {
     0 5px 30px rgba(0, 0, 0, 0.742),
     0 1px 0 rgba(255, 255, 255, 0.031) inset,
     0 -1px 0 rgba(0, 0, 0, 0.55) inset;
-  position: relative;
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   color: #b0b0b0;
@@ -25,6 +28,14 @@ nav {
     0 0 10px rgba(255, 255, 255, 0.061),
     0 0 15px rgba(255, 255, 255, 0.342);
 }
+
+.navbar.scrolled {
+ background: rgba(10, 25, 60, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
 
 .navbar::before {
   content: '';
