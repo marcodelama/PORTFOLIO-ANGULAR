@@ -26,6 +26,21 @@
   font-family: 'Minecraft', 'Roboto';
 }
 
+.jedi-font {
+  font-family: 'Starjedi', monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FFD700;
+  text-align: center;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 .bg-primary {
     background-color: #1E1E1E;
+}
+
+.bg-dark-blue {
+  background: linear-gradient(to bottom, rgba(13, 15, 26, 0) 0%, #0D0F1A 20%, #0D0F1A 100%);
 }

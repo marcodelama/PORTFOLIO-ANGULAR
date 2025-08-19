@@ -1,63 +1,58 @@
-<div class="bg-dark-blue">
-  <div class="container flex flex-col gap-10 p-6">
-    <h1 class="main-title">STACk PRoJEcTs</h1>
+<div class="container flex flex-col gap-10 p-6">
+  <h1 class="jedi-font">STACk PRoJEcTs</h1>
 
-    <div class="flex justify-center gap-5 flex-wrap">
-      @for(item of stackOptions; track item){
-      <button class="filter-tab">
-        <i [class]="['fa-solid', item.icon]" style="font-size: 40px; margin-bottom: 15px; color: #fff;"></i>
-        <div class="tab-label">{{item.title}}</div>
-      </button>
-      }
-    </div>
+  <div class="flex justify-center gap-5 flex-wrap">
+    @for(item of stackOptions; track item){
+    <button class="filter-tab">
+      <i [class]="['fa-solid', item.icon]" style="font-size: 40px; margin-bottom: 15px; color: #fff;"></i>
+      <div class="tab-label">{{item.title}}</div>
+    </button>
+    }
+  </div>
 
-    <div class="projects-section">
-      <div class="project-card">
-        <div class="flex justify-between items-center mb-5 flex-wrap">
-          <img src="/img/LogoBregma.png" alt="project-icon">
-          <p class="project-title">GetByte S.A.C.</p>
-          <div class="project-date">10/07/2023- 12/12/2023</div>
+  <div class="flex flex-wrap gap-6">
+    @for(project of projects; track project.id){
+    <div class="project-card w-full lg:w-[48%]">
+      <div class="flex justify-between items-center mb-5 flex-wrap">
+        <img class="mb-3" src="/img/LogoBregma.png" alt="project-icon">
+        <p class="project-title">{{ project.title }}</p>
+        <div class="project-date">{{ project.date }}</div>
+      </div>
+
+      <hr class="text-zinc-400" />
+
+      <div class="project-content mt-5">
+
+        <div class="project-image">
+          <img [src]="project.demoImage" alt="project-photo">
         </div>
+        <div class="project-info">
+          <p class="project-description">
+            {{ project.description }}
+          </p>
+          <p class="mb-2">Tecnologías utilizadas:</p>
 
-        <hr class="text-zinc-400" />
+          <div class="flex justify-between items-center flex-wrap">
+            <div class="stack-tech flex gap-3">
+              @for(tech of project.techs; track tech.id){
+              <img class="w-15 rounded-sm bg-primary p-1" [src]="tech.url" alt="">
+              }
+            </div>
 
-        <div class="project-content mt-5">
-          @for(project of projects; track project.id){
-          <div class="project-image">
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='120' viewBox='0 0 200 120'%3E%3Crect width='200' height='120' fill='%23f0f0f0'/%3E%3Ctext x='100' y='60' text-anchor='middle' dominant-baseline='central' font-family='Arial' font-size='12' fill='%23666'%3EImagen del proyecto%3C/text%3E%3C/svg%3E"
-              alt="project-photo">
-          </div>
-          <div class="project-info">
-            <p class="project-description">
-              Proyecto desarrollado para la automatización de consultas y
-              gestión de resultados de exámenes ocupacionales en la Clínica
-              Medical Roma.
-            </p>
-            <p class="mb-2">Tecnologías utilizadas:</p>
-
-            <div class="flex justify-between items-center flex-wrap">
-              <div class="stack-tech flex gap-3">
-                @for(tech of techs; track tech.id){
-                <img class="w-15 rounded-sm bg-primary p-1" [src]="tech.url" alt="">
-                }
-              </div>
-
-              <div class="minecraft-font flex flex-wrap gap-3">
-                <button class="bg-amber-400 p-2 rounded-lg cursor-pointer flex items-center">
-                  <i class="fa-solid fa-video mr-2 text-2xl"></i>
-                  Ver demo
-                </button>
-                <button class="bg-white p-2 rounded-lg flex cur sor-pointer items-center gap-2">
-                  <img class="w-7" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
-                  <p class="text-black">Repositorio</p>
-                </button>
-              </div>
+            <div class="minecraft-font flex flex-wrap gap-3">
+              <button class="bg-amber-400 p-2 rounded-lg cursor-pointer flex items-center">
+                <i class="fa-solid fa-video mr-2 text-xl"></i>
+                Ver demo
+              </button>
+              <button class="bg-white p-2 rounded-lg flex cursor-pointer items-center gap-2">
+                <img class="w-7" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
+                <p class="text-black">Repositorio</p>
+              </button>
             </div>
           </div>
-          }
         </div>
       </div>
     </div>
+    }
   </div>
 </div>

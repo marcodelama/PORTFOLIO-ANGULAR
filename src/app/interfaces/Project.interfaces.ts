@@ -7,6 +7,7 @@ export interface Project {
   description: string;
   date: string;
   imageUrl: string;
+  demoImage: string;
   techs: Tech[];
   stack: Stack[];
   demoUrl?: string; // Optional field for demo URL

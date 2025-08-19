@@ -9,17 +9,18 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  activeTab: number = 0
+  activeTab: number = 0;
 
-  navbarOptions:NavbarOptions[] = [
-    {title: 'Profile', value: 0, route: ''},
-    {title: 'Experience', value: 1, route: '/experience' },
-    {title: 'Projects', value: 2, route: ''},
-    {title: 'Soft skills', value: 3, route: ''},
-    {title: 'Achievements', value: 4, route: ''},
-  ]
-  
-  setActiveTab(tab: number){
-    this.activeTab = tab
+  navbarOptions: NavbarOptions[] = [
+    { title: 'Profile', value: 0, sectionId: 'profile' },
+    { title: 'Experience', value: 1, sectionId: 'experience' },
+    { title: 'Projects', value: 2, sectionId: 'projects' },
+    { title: 'Soft skills', value: 3, sectionId: 'skills' },
+    { title: 'Achievements', value: 4, sectionId: 'achievements' },
+  ];
+
+  setActiveTab(tab: number, sectionId: string) {
+    this.activeTab = tab;
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   }
 }
