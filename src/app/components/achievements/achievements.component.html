@@ -1,0 +1,29 @@
+<div class="p-6">
+    <h1 class="jedi-font mb-10 text-wrap">acHievemeNTS</h1>
+
+    <div class="achievements-grid">
+        @for(achiev of achievements; track achiev.id) {
+        <div class="achievement-card">
+            <!-- Fecha en la esquina superior -->
+            <div class="achievement-date">{{ achiev.date }}</div>
+
+            <!-- Imagen del certificado -->
+            <div class="certificate-image-container">
+                <img [src]="achiev.image" [alt]="achiev.title" class="certificate-image">
+
+                <!-- Botón Ver sobre la imagen -->
+                <button class="view-button" (click)="viewCertificate('ruta/certificado')">
+                    <i class="fas fa-eye"></i>
+                    Ver
+                </button>
+            </div>
+
+            <!-- Información del certificado -->
+            <div class="achievement-info">
+                <h3 class="achievement-title-card">{{ achiev.title }}</h3>
+                <p class="achiev-description">{{ achiev.description }}</p>
+            </div>
+        </div>
+        }
+    </div>
+</div>
