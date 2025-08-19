@@ -13,13 +13,16 @@
     </div>
 
     <!-- Menú de navegación -->
-    <div class="nav-menu gap-4">
+    <div class="nav-menu gap-2">
       @for(item of navbarOptions; track item.value) {
-      <button class="nav-item" [routerLink]="item.route" routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }">
-        {{ item.title }}
-      </button>
+        <button class="nav-item" [routerLink]="item.route" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+          {{ item.title }}
+        </button>
       }
+      <button class="settings-btn">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
     </div>
   </div>
 </nav>
