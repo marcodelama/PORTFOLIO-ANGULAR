@@ -1,28 +1,64 @@
 <div class="w-full flex justify-center">
     <div class="profile-container">
-        <div class="profile-image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/David_Beckham_UNICEF_%28cropped%29.jpg/250px-David_Beckham_UNICEF_%28cropped%29.jpg"
-                alt="Luz Agurto - Software Developer">
-        </div>
+        <!-- Imagen del perfil -->
+        <section>
+            <div class="profile-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/David_Beckham_UNICEF_%28cropped%29.jpg/250px-David_Beckham_UNICEF_%28cropped%29.jpg"
+                    alt="Marco De Lama - Software Developer">
+            </div>
+            <div class="contact-section">
+                <h3 class="section-title section-title-contact">CONTACT</h3>
+                <div class="contact-links">
+                    <ng-container *ngFor="let link of links; let i = index">
+                        <a [href]="link.url" target="_blank" class="contact-link">
+                            <i [class]="link.icon"></i>
+                            {{ link.name }}
+                        </a>
+                    </ng-container>
+                    <button class="download">
+                        <i class="fa-solid fa-file-download mr-2"></i>
+                        Download Cv
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido principal -->
         <div class="profile-content">
-            <h1 class="title">SofTwaRe develop;X - BuG ext;XminZtor</h1>
-            <h2 class="name text-wrap">Marco De Lama</h2>
+            <h1 class="title">SOFTWARE DEVELOPER - BUG EXTERMINATOR</h1>
+            <h2 class="name">MARCO DE LAMA</h2>
+            <hr class="w-full border-t-2 border-yellow-400 mb-4">
+
             <p class="description">
-                Soy <span class="highlight">desarrollador/a web</span> especializado/a en [tecnologías
-                que dominan, ej. <span class="tech-highlight">Angular</span>, <span
-                    class="framework-highlight">React</span>], <span class="framework-highlight">Node.js</span>, con
-                experiencia
-                en la creación de aplicaciones rápidas, escalables y
-                centradas en la experiencia del usuario. Me apasiona
-                transformar ideas en productos funcionales y atractivos,
-                cuidando tanto el código como el diseño.
-                He trabajado en <span class="highlight">[proyectos relevantes o áreas, ej. e-commerce, dashboards de
-                    datos,
-                    aplicaciones móviles]</span>,
-                donde he aprendido a combinar creatividad, buenas
-                prácticas y metodologías ágiles para entregar soluciones
-                eficientes.
+                Soy desarrollador/a web especializado/a en tecnologías como Angular, React y Node.js,
+                con experiencia en la creación de aplicaciones rápidas, escalables y centradas en la experiencia del
+                usuario.
+                Me apasiona transformar ideas en productos funcionales y atractivos, cuidando tanto el código como el
+                diseño.
+                He trabajado en proyectos relevantes como e-commerce, dashboards de datos y aplicaciones móviles,
+                donde he aprendido a combinar creatividad, buenas prácticas y metodologías ágiles para entregar
+                soluciones eficientes.
             </p>
+
+            <div class="skills-row">
+                <!-- My Main Skills -->
+                <div class="skills-section">
+                    <h3 class="section-title-skill">MY MAIN SKILLS</h3>
+                    <hr class="w-full border-t-2 border-yellow-400 mb-4">
+
+                    <div class="skills-grid">
+                        <ng-container *ngFor="let skill of skills; let i = index">
+                            <div class="skill-item">
+                                <span class="skill-number">{{ i + 1 }}</span>
+                                <hr class="w-12 border-t-2 border-white-400 mb-4">
+                                <i [ngClass]="[skill.icon, skill.color]" class="text-2xl"></i>
+                                <span class="skill-name">{{ skill.label }}</span>
+                            </div>
+
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

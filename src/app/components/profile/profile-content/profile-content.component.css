@@ -46,16 +46,13 @@
   font-family: 'Starjhol';
   font-size: 2rem;
   font-weight: 400;
-  color: #90EE90;
+  color: #F4CF00;
   letter-spacing: 2px;
-  margin-bottom: 30px;
   width: 50%;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border: 2px solid #90EE90;
   padding: 10px 20px;
   border-radius: 8px;
-  background: rgba(144, 238, 144, 0.1);
 }
 
 .description {
@@ -80,6 +77,133 @@
   font-weight: 500;
 }
 
+/* Sección de contacto y skill*/
+.contact-section {
+  flex: 1;
+  min-width: 200px;
+  margin-top: 1rem;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background-color: #2d2d2d;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.contact-link:hover {
+  background-color: #4A9EFF;
+  color: white;
+}
+
+.download{
+      background-color: #4A9EFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.section-title {
+  color: #4A9EFF;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4A9EFF;
+}
+
+.skills-row {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.skills-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.section-title-skill {
+  color: #F4CF00;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.skill-number {
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: #000;
+  padding: 4px 8px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-item i {
+  font-size: 1.8rem;
+}
+
+.skill-name {
+  font-size: 0.8rem;
+  color: #ccc;
+  font-weight: 500;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column;
@@ -102,5 +226,11 @@
 
   .description {
     font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .contact-skills-row {
+    flex-direction: column;
+    gap: 20px;
   }
 }

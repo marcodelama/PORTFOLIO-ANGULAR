@@ -1,0 +1,31 @@
+<footer class="footer fixed bottom-0 left-0 w-full text-white px-10 py-8">
+  <section
+    class="contenedor max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-10">
+
+    <h1 class="text-4xl font-extrabold leading-tight text-center md:text-left">
+      WRITE<br />ME
+    </h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 flex-1">
+      <a
+        *ngFor="let link of links"
+        [href]="link.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-4 hover:text-gray-300"
+      >
+        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0">
+          <i class="{{ link.icon }} text-black text-xl"></i>
+        </div>
+
+        <div>
+          <p class="font-semibold text-white/50">{{ link.name }}</p>
+          <p class="text-sm">{{ link.label }}</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Línea divisoria -->
+  <div class="border-t border-gray-400 mt-6 max-w-6xl mx-auto"></div>
+</footer>
